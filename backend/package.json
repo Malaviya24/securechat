@@ -8,12 +8,11 @@
   "scripts": {
     "start": "encore run",
     "build": "echo 'No build step needed for Encore.ts'",
-    "dev": "encore run"
+    "dev": "encore run",
+    "postinstall": "npx encore --version"
   },
   "dependencies": {
-    "encore.dev": "^1.48.8"
-  },
-  "devDependencies": {
+    "encore.dev": "^1.48.8",
     "typescript": "^5.8.3"
   }
 }
