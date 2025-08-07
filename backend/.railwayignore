@@ -1,0 +1,15 @@
+# Ignore Bun-related files
+bun.lockb
+.bun/
+
+# Ignore development files
+node_modules/
+*.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore build artifacts
+dist/
+build/
