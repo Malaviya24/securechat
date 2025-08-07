@@ -4,7 +4,6 @@
   "type": "module",
 
   "scripts": {
-    "build": "npm install",
     "start": "encore run"
   },
   "dependencies": {
