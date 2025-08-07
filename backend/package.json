@@ -4,7 +4,6 @@
   "type": "module",
 
   "scripts": {
-    "build": "echo 'Build completed successfully'",
     "start": "encore run"
   },
   "dependencies": {
