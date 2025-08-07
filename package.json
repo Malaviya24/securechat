@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Ultra-secure self-destructing chat application with end-to-end encryption",
   "type": "module",
-  "packageManager": "bun",
+  "packageManager": "npm",
   "workspaces": [
     "backend",
     "frontend"
