@@ -1,38 +1,32 @@
-# 🚀 SecureChat Render Deployment Guide
+# 🚀 SecureChat Railway Deployment Guide
 
-## ✅ **Why Render?**
+## ✅ **Why Railway?**
 - **Free tier** available
+- **Better monorepo support**
 - **Simple Node.js deployment**
-- **No package manager conflicts**
-- **Automatic GitHub integration**
 - **Built-in PostgreSQL database**
+- **Automatic GitHub integration**
 
 ---
 
 ## 📋 **Step-by-Step Deployment**
 
-### **Phase 1: Render Backend Setup**
+### **Phase 1: Railway Backend Setup**
 
-#### 1. **Create Render Account**
-- [ ] Go to [render.com](https://render.com)
+#### 1. **Create Railway Account**
+- [ ] Go to [railway.app](https://railway.app)
 - [ ] Sign up with GitHub
 - [ ] Verify your email
 
-#### 2. **Create New Web Service**
-- [ ] Click "New +"
-- [ ] Select "Web Service"
-- [ ] Connect your GitHub repository: `Malaviya24/securechat`
+#### 2. **Create New Project**
+- [ ] Click "New Project"
+- [ ] Select "Deploy from GitHub repo"
+- [ ] Connect your repository: `Malaviya24/securechat`
 - [ ] Set **Root Directory**: `backend`
-- [ ] Set **Name**: `securechat-backend`
+- [ ] Click "Deploy"
 
-#### 3. **Configure Build Settings**
-- [ ] **Environment**: `Node`
-- [ ] **Build Command**: `cd backend && npm install`
-- [ ] **Start Command**: `cd backend && npm start`
-- [ ] **Plan**: Free
-
-#### 4. **Add Environment Variables**
-Click "Environment" tab and add these **exact** variables:
+#### 3. **Configure Environment Variables**
+Go to your project → "Variables" tab and add:
 
 | **Name** | **Value** |
 |----------|-----------|
@@ -41,20 +35,20 @@ Click "Environment" tab and add these **exact** variables:
 | `JWT_SECRET` | `securechat-super-secret-jwt-key-2024` |
 | `ENCRYPTION_KEY` | `securechat-encryption-key-2024` |
 
-#### 5. **Add PostgreSQL Database**
-- [ ] Go to "New +" → "PostgreSQL"
+#### 4. **Add PostgreSQL Database**
+- [ ] Go to "New" → "Database" → "PostgreSQL"
 - [ ] Set **Name**: `securechat-db`
 - [ ] **Plan**: Free
-- [ ] Copy the **Internal Database URL**
+- [ ] Copy the **Database URL**
 - [ ] Add to environment variables:
   | **Name** | **Value** |
   |----------|-----------|
-  | `DATABASE_URL` | `[Your Render PostgreSQL URL]` |
+  | `DATABASE_URL` | `[Your Railway PostgreSQL URL]` |
 
-#### 6. **Deploy**
-- [ ] Click "Create Web Service"
+#### 5. **Deploy**
+- [ ] Railway will automatically deploy
 - [ ] Wait for deployment (2-3 minutes)
-- [ ] Copy your backend URL: `https://securechat-backend.onrender.com`
+- [ ] Copy your backend URL: `https://securechat-backend.railway.app`
 
 ---
 
@@ -67,7 +61,7 @@ Click "Environment" tab and add these **exact** variables:
 - [ ] Add environment variable:
   | **Name** | **Value** |
   |----------|-----------|
-  | `VITE_API_URL` | `https://securechat-backend.onrender.com` |
+  | `VITE_API_URL` | `https://securechat-backend.railway.app` |
 - [ ] Click "Deploy"
 
 #### 2. **Get Frontend URL**
@@ -109,7 +103,7 @@ Your deployment is successful when:
 
 If you encounter issues:
 
-1. **Check Render logs** - Go to your service → "Logs" tab
+1. **Check Railway logs** - Go to your project → "Deployments" tab
 2. **Check Vercel logs** - Go to your project → "Functions" tab
 3. **Verify environment variables** - Make sure all variables are set
 4. **Test database connection** - Check if DATABASE_URL is correct
@@ -121,14 +115,14 @@ If you encounter issues:
 Once deployed, you'll have:
 
 - **Frontend**: `https://securechat.vercel.app`
-- **Backend**: `https://securechat-backend.onrender.com`
+- **Backend**: `https://securechat-backend.railway.app`
 - **Repository**: `https://github.com/Malaviya24/securechat`
 
 ---
 
 ## 💰 **Cost**
 
-- **Render**: Free tier (750 hours/month)
+- **Railway**: Free tier (500 hours/month)
 - **Vercel**: Free tier (unlimited)
 - **Total**: $0/month for personal use
 
@@ -136,12 +130,9 @@ Once deployed, you'll have:
 
 ## 📋 **Exact Configuration Summary**
 
-### **Render Backend Service:**
-- **Name**: `securechat-backend`
+### **Railway Backend Service:**
 - **Root Directory**: `backend`
-- **Environment**: `Node`
-- **Build Command**: `cd backend && npm install`
-- **Start Command**: `cd backend && npm start`
+- **Start Command**: `npm start`
 - **Plan**: Free
 
 ### **Environment Variables:**
@@ -151,11 +142,11 @@ Once deployed, you'll have:
 | `PORT` | `3000` |
 | `JWT_SECRET` | `securechat-super-secret-jwt-key-2024` |
 | `ENCRYPTION_KEY` | `securechat-encryption-key-2024` |
-| `DATABASE_URL` | `[Your Render PostgreSQL URL]` |
+| `DATABASE_URL` | `[Your Railway PostgreSQL URL]` |
 
 ### **Vercel Frontend:**
 - **Root Directory**: `frontend`
-- **Environment Variable**: `VITE_API_URL` = `https://securechat-backend.onrender.com`
+- **Environment Variable**: `VITE_API_URL` = `https://securechat-backend.railway.app`
 
 ---
 
