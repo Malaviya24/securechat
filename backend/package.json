@@ -6,7 +6,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "start": "encore run",
+    "start": "node -e \"console.log('Starting Encore.ts...'); require('encore.dev').run()\"",
     "build": "echo 'No build step needed for Encore.ts'",
     "dev": "encore run"
   },
