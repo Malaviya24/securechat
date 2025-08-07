@@ -32,14 +32,14 @@
 - [ ] **Plan**: Free
 
 #### 4. **Add Environment Variables**
-Click "Environment" tab and add:
+Click "Environment" tab and add these **exact** variables:
 
-```bash
-NODE_ENV=production
-PORT=3000
-JWT_SECRET=securechat-super-secret-jwt-key-2024
-ENCRYPTION_KEY=securechat-encryption-key-2024
-```
+| **Name** | **Value** |
+|----------|-----------|
+| `NODE_ENV` | `production` |
+| `PORT` | `3000` |
+| `JWT_SECRET` | `securechat-super-secret-jwt-key-2024` |
+| `ENCRYPTION_KEY` | `securechat-encryption-key-2024` |
 
 #### 5. **Add PostgreSQL Database**
 - [ ] Go to "New +" → "PostgreSQL"
@@ -47,14 +47,14 @@ ENCRYPTION_KEY=securechat-encryption-key-2024
 - [ ] **Plan**: Free
 - [ ] Copy the **Internal Database URL**
 - [ ] Add to environment variables:
-  ```bash
-  DATABASE_URL=postgresql://postgres:password@your-render-db-url:5432/railway
-  ```
+  | **Name** | **Value** |
+  |----------|-----------|
+  | `DATABASE_URL` | `[Your Render PostgreSQL URL]` |
 
 #### 6. **Deploy**
 - [ ] Click "Create Web Service"
 - [ ] Wait for deployment (2-3 minutes)
-- [ ] Copy your backend URL: `https://your-app.onrender.com`
+- [ ] Copy your backend URL: `https://securechat-backend.onrender.com`
 
 ---
 
@@ -65,13 +65,13 @@ ENCRYPTION_KEY=securechat-encryption-key-2024
 - [ ] Import repository: `Malaviya24/securechat`
 - [ ] Set **Root Directory**: `frontend`
 - [ ] Add environment variable:
-  ```bash
-  VITE_API_URL=https://your-render-backend-url.onrender.com
-  ```
+  | **Name** | **Value** |
+  |----------|-----------|
+  | `VITE_API_URL` | `https://securechat-backend.onrender.com` |
 - [ ] Click "Deploy"
 
 #### 2. **Get Frontend URL**
-- [ ] Copy your Vercel URL: `https://your-app.vercel.app`
+- [ ] Copy your Vercel URL: `https://securechat.vercel.app`
 
 ---
 
@@ -120,8 +120,8 @@ If you encounter issues:
 
 Once deployed, you'll have:
 
-- **Frontend**: `https://your-app.vercel.app`
-- **Backend**: `https://your-app.onrender.com`
+- **Frontend**: `https://securechat.vercel.app`
+- **Backend**: `https://securechat-backend.onrender.com`
 - **Repository**: `https://github.com/Malaviya24/securechat`
 
 ---
@@ -131,6 +131,31 @@ Once deployed, you'll have:
 - **Render**: Free tier (750 hours/month)
 - **Vercel**: Free tier (unlimited)
 - **Total**: $0/month for personal use
+
+---
+
+## 📋 **Exact Configuration Summary**
+
+### **Render Backend Service:**
+- **Name**: `securechat-backend`
+- **Root Directory**: `backend`
+- **Environment**: `Node`
+- **Build Command**: `npm install && npm run build`
+- **Start Command**: `npm start`
+- **Plan**: Free
+
+### **Environment Variables:**
+| **Name** | **Value** |
+|----------|-----------|
+| `NODE_ENV` | `production` |
+| `PORT` | `3000` |
+| `JWT_SECRET` | `securechat-super-secret-jwt-key-2024` |
+| `ENCRYPTION_KEY` | `securechat-encryption-key-2024` |
+| `DATABASE_URL` | `[Your Render PostgreSQL URL]` |
+
+### **Vercel Frontend:**
+- **Root Directory**: `frontend`
+- **Environment Variable**: `VITE_API_URL` = `https://securechat-backend.onrender.com`
 
 ---
 
