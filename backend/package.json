@@ -4,6 +4,7 @@
   "type": "module",
 
   "scripts": {
+    "build": "echo 'No build step needed for Encore.ts'",
     "start": "encore run"
   },
   "dependencies": {
