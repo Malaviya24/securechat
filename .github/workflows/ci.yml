@@ -1,0 +1,74 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        npm install
+        cd frontend && npm install
+        cd ../backend && npm install
+    
+    - name: Run tests
+      run: |
+        npm test
+        cd frontend && npm run test
+        cd ../backend && npm run test
+    
+    - name: Build frontend
+      run: |
+        cd frontend
+        npm run build
+    
+    - name: Build backend
+      run: |
+        cd backend
+        npm run build
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        npm install
+        cd frontend && npm install
+        cd ../backend && npm install
+    
+    - name: Build application
+      run: |
+        cd frontend && npm run build
+        cd ../backend && npm run build
+    
+    - name: Deploy to Encore
+      env:
+        ENCORE_AUTH_TOKEN: ${{ secrets.ENCORE_AUTH_TOKEN }}
+      run: |
+        npm install -g @encore/cli
+        encore deploy
