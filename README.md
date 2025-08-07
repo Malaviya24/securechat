@@ -4,7 +4,7 @@
 
 ![SecureChat Logo](https://img.shields.io/badge/SecureChat-Ultra--Secure-purple?style=for-the-badge&logo=shield&logoColor=white)
 
-[![CI/CD](https://github.com/Malaviya24/securechat/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/Malaviya24/securechat/actions)
+[![CI/CD](https://github.com/YOUR_USERNAME/securechat/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/YOUR_USERNAME/securechat/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -121,7 +121,7 @@ SecureChat is an ultra-secure, self-destructing chat application designed for pr
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/securechat.git
+   git clone https://github.com/YOUR_USERNAME/securechat.git
    cd securechat
    ```
 
@@ -425,9 +425,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Getting Help
 
 - 📖 **Documentation**: Check our [docs](docs/) folder
-- 🐛 **Bug Reports**: [Open an issue](https://github.com/yourusername/securechat/issues)
-- 💡 **Feature Requests**: [Request a feature](https://github.com/yourusername/securechat/issues)
-- 💬 **Discussions**: [Join the discussion](https://github.com/yourusername/securechat/discussions)
+- 🐛 **Bug Reports**: [Open an issue](https://github.com/YOUR_USERNAME/securechat/issues)
+- 💡 **Feature Requests**: [Request a feature](https://github.com/YOUR_USERNAME/securechat/issues)
+- 💬 **Discussions**: [Join the discussion](https://github.com/YOUR_USERNAME/securechat/discussions)
 
 ### Security Issues
 
@@ -510,6 +510,6 @@ Works seamlessly across all devices:
 
 **Built with ❤️ for privacy and security**
 
-[⭐ Star this project](https://github.com/yourusername/securechat) if you find it useful!
+[⭐ Star this project](https://github.com/YOUR_USERNAME/securechat) if you find it useful!
 
 </div>
