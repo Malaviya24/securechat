@@ -4,6 +4,8 @@
 
 ![SecureChat Logo](https://img.shields.io/badge/SecureChat-Ultra--Secure-purple?style=for-the-badge&logo=shield&logoColor=white)
 
+[![CI/CD](https://github.com/Malaviya24/securechat/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/Malaviya24/securechat/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Encore.ts](https://img.shields.io/badge/Encore.ts-Backend-green?style=for-the-badge)](https://encore.dev/)
