@@ -6,7 +6,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "echo 'No build step needed'",
+    "build": "true",
     "dev": "node server.js"
   },
   "dependencies": {
