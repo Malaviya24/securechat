@@ -27,8 +27,8 @@
 
 #### 3. **Configure Build Settings**
 - [ ] **Environment**: `Node`
-- [ ] **Build Command**: `npm install && npm run build`
-- [ ] **Start Command**: `npm start`
+- [ ] **Build Command**: `cd backend && npm install`
+- [ ] **Start Command**: `cd backend && npm start`
 - [ ] **Plan**: Free
 
 #### 4. **Add Environment Variables**
@@ -140,8 +140,8 @@ Once deployed, you'll have:
 - **Name**: `securechat-backend`
 - **Root Directory**: `backend`
 - **Environment**: `Node`
-- **Build Command**: `npm install && npm run build`
-- **Start Command**: `npm start`
+- **Build Command**: `cd backend && npm install`
+- **Start Command**: `cd backend && npm start`
 - **Plan**: Free
 
 ### **Environment Variables:**
